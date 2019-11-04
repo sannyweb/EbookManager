@@ -1,0 +1,709 @@
+.aside .aside-content .tags h4, .aside .aside-content .mais-visitados h4, .aside .aside-content .menu-categorias h4, .aside .cadastro h4 {
+  margin: 5px 0 15px;
+  text-align: center;
+  padding: 10px;
+  color: #ffffff;
+}
+
+.aside .aside-content .tags, .aside .aside-content .mais-visitados, .aside .aside-content .menu-categorias, .aside .aside-content .search, .aside .user-info, .aside .cadastro, .main .back-btn {
+  max-width: 100%;
+  padding: 10px;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+  background-color: #fafafa;
+}
+
+.aside .aside-content .search form, .header .menu .menu-items form {
+  width: 100%;
+  padding: 0 20px;
+}
+.aside .aside-content .search .input-group, .header .menu .menu-items .input-group {
+  margin: 10px 0;
+  display: flex;
+}
+.aside .aside-content .search .input-group input, .header .menu .menu-items .input-group input {
+  width: 100%;
+  padding: 5px;
+  font-size: 1.1em;
+  outline: none;
+  border: 1px solid #d1d1d1;
+  border-right: none;
+}
+.aside .aside-content .search .input-group button, .header .menu .menu-items .input-group button {
+  width: 50px;
+  outline: none;
+  border: none;
+  border-left: none;
+  background-color: #00a4b0;
+  background-image: url(../img/baseline-search-24px.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+}
+.aside .aside-content .search .input-group button:hover, .header .menu .menu-items .input-group button:hover {
+  background-color: #18c3cf;
+}
+
+.aside .aside-content .mais-visitados .livros .livros-item a, .aside .user-info a, .main .main-content .recentes .btn-ver-mais a {
+  padding: 10px 30px;
+  margin-right: 20px;
+  font-weight: 600;
+  color: white;
+  display: inline-block;
+  background-color: #00aff2;
+}
+.aside .aside-content .mais-visitados .livros .livros-item a:hover, .aside .user-info a:hover, .main .main-content .recentes .btn-ver-mais a:hover {
+  background-color: #44caff;
+  color: #464444;
+}
+
+@font-face {
+  font-family: Arcade;
+  src: url(../font/Arcade_Book.ttf) format("truetype");
+}
+* {
+  box-sizing: border-box;
+}
+
+::placeholder {
+  color: #9e9d9d;
+  font-size: 0.9em;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f0f0f0;
+  font-family: "Signika", sans-serif;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(3, minmax(100px, auto));
+  grid-gap: 10px;
+  grid-template-areas: "header header" "main    aside" "footer footer";
+}
+
+.header {
+  grid-area: header;
+  display: flex;
+  flex-wrap: wrap;
+}
+.header h1,
+.header h3 {
+  text-align: center;
+  width: 100%;
+  margin: 100px 0;
+}
+.header h1 a {
+  text-decoration: none;
+  color: #00a4b0;
+  font-family: Arcade;
+  font-size: 2em;
+  text-shadow: 0 0 5px black;
+}
+.header .menu {
+  width: 100%;
+  height: 40px;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 99;
+  display: none;
+  border-bottom-color: #6d6d6d;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  background-color: #e4e3e3;
+  transition: height 0.2s ease, transform 0.2s ease;
+}
+.header .menu span {
+  margin: auto;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 40px;
+  transform: translate(-50%, 25%);
+  font-family: Arcade;
+  font-size: 1.1em;
+}
+.header .menu .btn-home {
+  width: 50px;
+  height: 40px;
+  display: inline-block;
+  cursor: pointer;
+  background-color: #2c2c2c;
+  color: white;
+  background-image: url(../img/home.svg);
+  background-repeat: no-repeat;
+  background-size: 35px;
+  background-position: center;
+}
+.header .menu .menu-items {
+  display: block;
+}
+.header .menu .menu-items a {
+  display: block;
+  padding: 10px 0;
+  text-align: center;
+  text-decoration: none;
+  color: #5f5f5f;
+  font-size: 1.3em;
+}
+.header .menu .menu-items a:hover {
+  background-color: gray;
+  color: white;
+}
+.header .menu .show-menu-items {
+  width: 50px;
+  height: 40px;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  background-image: url(../img/menu.svg);
+  background-repeat: no-repeat;
+  background-size: 25px;
+  background-position: center;
+  cursor: pointer;
+}
+
+.main {
+  grid-area: main;
+  padding: 5px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.main .back-btn {
+  max-width: 960px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-bottom: 20px;
+}
+.main .back-btn a:link,
+.main .back-btn a:visited {
+  all: unset;
+}
+.main .back-btn .home,
+.main .back-btn .last-page {
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #444444;
+}
+.main .back-btn .home:hover,
+.main .back-btn .last-page:hover {
+  text-decoration: underline;
+  background-color: #cecece;
+}
+.main .back-btn .adm {
+  padding: 10px !important;
+  font-weight: bold !important;
+  cursor: pointer !important;
+  color: #444444 !important;
+  margin-left: auto !important;
+}
+.main .back-btn .adm:hover {
+  text-decoration: underline;
+  background-color: #cecece;
+}
+.main .main-content {
+  max-width: 960px;
+  margin-left: auto;
+}
+.main .main-content .destaque {
+  margin: 0 auto 20px;
+  max-width: 100%;
+  height: auto;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  background-color: #fafafa;
+}
+.main .main-content .destaque img {
+  max-width: 278px;
+  height: auto;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+.main .main-content .destaque .detalhes {
+  width: 100%;
+  padding: 15px;
+  overflow: hidden;
+  position: relative;
+  background-color: #fafafa;
+}
+.main .main-content .destaque .detalhes h3,
+.main .main-content .destaque .detalhes h4 {
+  text-align: center;
+  margin: 5px;
+  color: #5f5f5f;
+}
+.main .main-content .destaque .detalhes h4 {
+  margin: 0;
+}
+.main .main-content .destaque .detalhes table {
+  width: 100%;
+  margin-bottom: 20px;
+  font-size: 0.85em;
+  letter-spacing: 1.3px;
+}
+.main .main-content .destaque .detalhes table th {
+  color: #5f5f5f;
+  width: 50%;
+  text-align: right;
+  padding: 0;
+  letter-spacing: initial;
+  padding-right: 10px;
+}
+.main .main-content .destaque .detalhes table td {
+  padding: 0;
+  padding-left: 10px;
+}
+.main .main-content .destaque .detalhes .sinopse {
+  font-size: 0.95em;
+  line-height: 1.3;
+}
+.main .main-content .destaque .detalhes .blur {
+  position: absolute;
+  bottom: 0;
+  width: calc(100% - 20px);
+  height: 80px;
+  background-color: #f0f0f0;
+  background: linear-gradient(to bottom, transparent, #fafafa, #fafafa);
+}
+.main .main-content .destaque .detalhes .blur a {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+  padding: 15px 10px 10px;
+  font-weight: 600;
+  color: #00aff2;
+  text-decoration: none;
+}
+.main .main-content .destaque .detalhes .blur a:hover {
+  text-decoration: underline;
+}
+.main .main-content .recentes {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: #fafafa;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+.main .main-content .recentes h2 {
+  width: 100%;
+  margin: 1.5em;
+  text-align: center;
+  color: #5f5f5f;
+}
+.main .main-content .recentes a {
+  text-decoration: none;
+  color: inherit;
+}
+.main .main-content .recentes .recentes-item {
+  height: auto;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+.main .main-content .recentes .recentes-item img {
+  width: 260px;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+.main .main-content .recentes .recentes-item .recentes-info .recentes-item-titulo,
+.main .main-content .recentes .recentes-item .recentes-info .recentes-item-autor,
+.main .main-content .recentes .recentes-item .recentes-info .recentes-item-genero {
+  width: 260px;
+  margin: 2.5px;
+  text-align: center;
+}
+.main .main-content .recentes .recentes-item .recentes-info .recentes-item-titulo {
+  font-weight: 600;
+}
+.main .main-content .recentes .btn-ver-mais {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.aside {
+  grid-area: aside;
+  padding: 5px;
+}
+.aside .cadastro h4 {
+  background-color: #ff1339;
+}
+.aside .cadastro form {
+  width: 100%;
+  padding: 0 20px;
+}
+.aside .cadastro form .input-group {
+  margin: 10px auto;
+  width: 100%;
+  display: flex;
+}
+.aside .cadastro form .input-group input {
+  padding: 7px;
+  border: 1px solid #d1d1d1;
+  width: 100%;
+  border-right: none;
+}
+.aside .cadastro form .input-group span {
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.aside .cadastro form .input-group span {
+  display: block;
+  width: 40px;
+  border: 1px solid #d1d1d1;
+  background-color: #ff1339;
+}
+.aside .cadastro form .input-group .ico-user {
+  background-image: url(../img/man-user.svg);
+}
+.aside .cadastro form .input-group .ico-email {
+  background-image: url(../img/mail.svg);
+}
+.aside .cadastro form .input-group .ico-pass {
+  background-image: url(../img/password.svg);
+}
+.aside .cadastro form input[type=submit] {
+  width: 100%;
+  padding: 8px;
+  font-size: 1em;
+  font-weight: 600;
+  border: none;
+  background-color: #ff1339;
+  color: #fdf4ed;
+  outline: none;
+  cursor: pointer;
+}
+.aside .cadastro form input[type=submit]:hover {
+  background-color: #ff4161;
+}
+.aside .cadastro form input[type=submit]:active {
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+}
+.aside .user-info .user-info-name {
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 1.3em;
+  font-weight: 600;
+  position: relative;
+  text-transform: capitalize;
+}
+.aside .user-info .user-info-name a {
+  all: unset;
+  position: absolute;
+  right: 0;
+  top: 0;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  background-image: url(../img/power.svg);
+  background-size: 24px;
+}
+.aside .user-info a {
+  display: block;
+  width: 120px;
+  padding: 10px;
+  text-align: center;
+  margin: auto;
+  text-decoration: none;
+}
+.aside .aside-content {
+  max-width: 400px;
+  margin-right: auto;
+}
+.aside .aside-content .menu-categorias h4 {
+  background-color: #00aff2;
+}
+.aside .aside-content .menu-categorias ul {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.aside .aside-content .menu-categorias ul li {
+  width: 100%;
+  padding-left: 10px;
+  font-size: 1.1em;
+  color: #5f5f5f;
+  text-transform: capitalize;
+  cursor: pointer;
+}
+.aside .aside-content .menu-categorias ul li a {
+  all: inherit;
+  padding: 10px 0;
+}
+.aside .aside-content .menu-categorias ul li:hover {
+  background-color: #44caff;
+  color: white;
+}
+.aside .aside-content .mais-visitados h4 {
+  background-color: #00a4b0;
+}
+.aside .aside-content .mais-visitados .livros {
+  width: 100%;
+  min-height: 250px;
+  padding: 5px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.aside .aside-content .mais-visitados .livros .livros-item {
+  width: 185px;
+  margin-bottom: 10px;
+  padding: 10px 0;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.aside .aside-content .mais-visitados .livros .livros-item img {
+  width: 100px;
+  clear: both;
+  display: block;
+  margin: auto;
+}
+.aside .aside-content .mais-visitados .livros .livros-item span {
+  height: 3em;
+  width: 100%;
+}
+.aside .aside-content .mais-visitados .livros .livros-item span,
+.aside .aside-content .mais-visitados .livros .livros-item a {
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+  font-size: 0.8em;
+}
+.aside .aside-content .mais-visitados .livros .livros-item a {
+  text-decoration: none;
+  width: 120px;
+  font-size: 1em;
+  font-weight: normal;
+  margin: auto;
+  text-align: center;
+  padding: 5px;
+}
+.aside .aside-content .mais-visitados .livros .livros-item:hover {
+  box-shadow: 0 0 2px #00aff2;
+}
+.aside .aside-content .tags h4 {
+  background-color: #ff6a1e;
+}
+.aside .aside-content .tags .container-tags {
+  display: flex;
+  flex-wrap: wrap;
+}
+.aside .aside-content .tags .container-tags .tag-item {
+  background-color: #fa7f42;
+  margin: 5px;
+  color: #ffffff;
+  border-radius: 8px 0;
+  cursor: pointer;
+}
+.aside .aside-content .tags .container-tags .tag-item a {
+  all: inherit;
+  padding: 5px;
+  margin: 0;
+}
+.aside .aside-content .tags .container-tags .tag-item:hover {
+  background-color: #ff5f0f;
+}
+
+.error {
+  padding: 10px 0;
+  background-color: #eb5b5b;
+  text-align: center;
+  font-weight: bold;
+  color: #5f0707;
+}
+
+.success {
+  padding: 10px 0;
+  background-color: #44cc7d;
+  text-align: center;
+  font-weight: bold;
+  color: #052409;
+}
+
+.alert {
+  padding: 10px 0;
+  background-color: #e4d870;
+  text-align: center;
+  font-weight: bold;
+  color: #2c2a08;
+}
+
+.footer {
+  grid-area: footer;
+  padding: 20px 0;
+  background-color: #00aff2;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.footer .footer-titulo {
+  width: 100%;
+  text-align: center;
+  margin: 10px 0;
+  font-size: 1.2em;
+  color: white;
+  font-weight: 600;
+}
+.footer .da42 {
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 0.9em;
+  font-weight: 500;
+}
+.footer .contato {
+  width: 25%;
+  min-width: 350px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.footer .contato h3 {
+  text-align: center;
+  color: white;
+  width: 100%;
+  font-weight: normal;
+}
+.footer .contato a, .footer .contato .no-link {
+  margin: 10px 20px;
+  border-radius: 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.footer .contato a:hover, .footer .contato .no-link:hover {
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+.footer .contato a:hover:after, .footer .contato .no-link:hover:after {
+  content: attr(data-descr);
+  display: block;
+  position: absolute;
+  bottom: 110%;
+  padding: 10px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  border-radius: 5px;
+  transition: 0.2s;
+  font-size: 0.8em;
+}
+.footer .contato a:hover:after::after, .footer .contato .no-link:hover:after::after {
+  content: "dasasd";
+  display: block;
+  width: 5px;
+  height: 5px;
+  background-color: rgba(0, 0, 0, 0.9);
+  position: absolute;
+}
+.footer .contato .contato-item {
+  width: 120px;
+  height: 120px;
+  background-size: 50%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.footer .contato .face {
+  background-image: url(../img/facebook-logo.svg);
+}
+.footer .contato .instagram {
+  background-image: url(../img/instagram.svg);
+}
+.footer .contato .at {
+  background-image: url(../img/at.svg);
+}
+.footer .contato .wpp {
+  background-image: url(../img/whatsapp.svg);
+}
+.footer .contato:first-child {
+  margin-right: 100px;
+}
+@media screen and (max-width: 817px) {
+  .footer .contato:first-child {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .destaque {
+    flex-wrap: wrap;
+    height: auto !important;
+  }
+  .destaque .destaque-capa,
+.destaque .detalhes {
+    width: 100%;
+  }
+  .destaque .destaque-capa {
+    padding: 15px;
+  }
+  .destaque .destaque-capa img {
+    display: block;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 20px;
+  }
+
+  .container {
+    grid-template-areas: "header header" "main     main" "aside   aside" "footer footer";
+  }
+  .container .header h1 a {
+    font-size: 1.3em;
+  }
+
+  .aside-content {
+    max-width: 100% !important;
+  }
+  .aside-content input:not(:last-child) {
+    font-size: 1.5em !important;
+  }
+  .aside-content .ico-pass,
+.aside-content .ico-email,
+.aside-content .ico-user {
+    width: 60px !important;
+  }
+
+  .detalhes {
+    height: 600px;
+  }
+
+  .search {
+    display: none;
+  }
+
+  .header .menu {
+    display: block;
+  }
+
+  .header {
+    padding-top: calc(20px + 1em);
+  }
+
+  .aside .aside-content .mais-visitados .livros .livros-item {
+    width: 250px;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

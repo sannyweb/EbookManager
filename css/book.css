@@ -1,0 +1,274 @@
+.livro-info-container {
+  background-color: #fafafa;
+  width: 100%;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+.livro-info-container .btn-dowload {
+  padding: 10px;
+  width: 100px;
+  text-align: center;
+  background-color: #00aff2;
+  color: #fdf4ed;
+  font-weight: 600;
+  cursor: pointer;
+  display: block;
+  user-select: none;
+}
+.livro-info-container .btn-dowload:hover {
+  background-color: #44caff;
+  color: #5f5f5f;
+}
+.livro-info-container .files {
+  width: 100%;
+  height: 0;
+  margin-top: 20px;
+  overflow: hidden;
+}
+.livro-info-container .files .item-download {
+  width: 800px;
+  width: 100%;
+}
+.livro-info-container .files .item-download table {
+  width: 100%;
+  margin: auto;
+  border-collapse: collapse;
+  border: 1px solid #dbdada;
+}
+.livro-info-container .files .item-download table th {
+  width: 25%;
+  padding: 5px 0;
+  color: white;
+}
+.livro-info-container .files .item-download table tr:nth-child(even) {
+  background-color: #eceaea;
+}
+.livro-info-container .files .item-download table tr:first-child {
+  background-color: #5f5f5f;
+}
+.livro-info-container .files .item-download table td {
+  text-align: center;
+  padding: 8px 0;
+}
+.livro-info-container .files .item-download table td a {
+  text-decoration: none;
+  color: #00aff2;
+}
+.livro-info-container .files .item-download table td a:hover {
+  color: #44caff;
+  text-decoration: underline;
+}
+@media screen and (max-width: 660px) {
+  .livro-info-container .files .item-download table {
+    font-size: 0.7em;
+  }
+}
+.livro-info-container #download {
+  display: none;
+}
+.livro-info-container #download:checked ~ .files {
+  height: auto;
+}
+.livro-info-container #download:checked + .btn-dowload {
+  background-color: #44caff;
+  color: #5f5f5f;
+}
+.livro-info-container img {
+  width: 200px;
+  float: left;
+  margin: 0 20px 20px 0;
+}
+.livro-info-container p {
+  font-size: 1em;
+  line-height: 1.5;
+  padding: 5px 0;
+  margin: 0;
+  color: #414141;
+}
+.livro-info-container h4 {
+  text-align: left;
+  font-size: 1.3em;
+  margin: 10px 0;
+  color: #5f5f5f;
+}
+.livro-info-container .informacoes-livro {
+  margin: 20px 0;
+  background-color: #f0f0f0;
+  padding: 10px;
+}
+.livro-info-container .informacoes-livro h4 {
+  text-align: center;
+  padding: 15px 0;
+}
+.livro-info-container .informacoes-livro table {
+  width: 100%;
+}
+.livro-info-container .informacoes-livro table th, .livro-info-container .informacoes-livro table td {
+  width: 50%;
+  color: #414141;
+}
+.livro-info-container .informacoes-livro table th {
+  text-align: right;
+  padding-right: 20px;
+  color: #5f5f5f;
+}
+
+.resenhas {
+  width: 100%;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #fafafa;
+}
+.resenhas h3 {
+  margin: 10px 0;
+  color: #5f5f5f;
+}
+.resenhas .box-resenha {
+  width: 100%;
+  padding: 10px;
+  background-color: #f0f0f0;
+  margin-bottom: 20px;
+}
+.resenhas .box-resenha .user-info {
+  width: 100%;
+  display: flex;
+  align-items: baseline;
+}
+.resenhas .box-resenha .user-info .nick-name {
+  margin-right: 20px;
+  font-weight: 600;
+  font-size: 1.2em;
+  color: #00aff2;
+}
+.resenhas .box-resenha .user-info .data-resenha {
+  font-size: 0.75em;
+  color: gray;
+}
+.resenhas .box-resenha .titulo-resenha {
+  font-size: 1em;
+  margin: 7px 0;
+  margin-left: 10px;
+  color: #5f5f5f;
+}
+.resenhas .box-resenha .corpo-resenha {
+  width: 100%;
+  padding: 10px;
+  background-color: #fdf7eb;
+  border-radius: 0 15px 15px 15px;
+}
+.resenhas .box-resenha .corpo-resenha p {
+  margin-top: 0;
+  color: #414141;
+  line-height: 1.4;
+}
+.resenhas a {
+  padding: 10px 15px;
+  width: 220px;
+  text-align: center;
+  text-decoration: none;
+  margin: auto;
+  display: block;
+  background-color: #00aff2;
+  color: #fdf4ed;
+  border: none;
+  outline: none;
+  font-size: 1.1em;
+  font-weight: 500;
+  cursor: pointer;
+}
+.resenhas a:hover {
+  background-color: #44caff;
+  color: #5f5f5f;
+}
+
+.comentarios {
+  width: 100%;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #fafafa;
+}
+.comentarios h3 {
+  margin: 10px 0;
+  color: #5f5f5f;
+}
+.comentarios .deixar-comentario {
+  margin-bottom: 20px;
+}
+.comentarios .deixar-comentario form {
+  display: flex;
+  justify-content: space-between;
+}
+.comentarios .deixar-comentario form ::placeholder {
+  color: #b6b6b6;
+  font-size: 1.1em;
+}
+.comentarios .deixar-comentario form textarea {
+  width: 100%;
+  font-family: sans-serif;
+  font-size: 1.1em;
+  outline: none;
+  resize: none;
+  padding: 5px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.comentarios .deixar-comentario form textarea:disabled {
+  cursor: no-drop;
+}
+.comentarios .deixar-comentario form input[type=submit] {
+  width: 100px;
+  padding: 10px 0;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.2em;
+  font-weight: 500;
+  background-color: #00aff2;
+  color: #fdf4ed;
+  cursor: pointer;
+  outline: none;
+}
+.comentarios .deixar-comentario form input[type=submit]:hover {
+  background-color: #44caff;
+}
+.comentarios .deixar-comentario form input[type=submit]:disabled {
+  background-color: #a1a1a1;
+  color: #4e4d4d;
+  cursor: no-drop;
+}
+.comentarios .box-comentario {
+  width: 100%;
+  padding: 10px;
+  background-color: #f0f0f0;
+  display: flex;
+}
+.comentarios .box-comentario .user-info {
+  width: 30%;
+  padding: 5px;
+  text-align: right;
+  padding-right: 20px;
+  font-size: 1.2em;
+  font-weight: 500;
+  color: #00aff2;
+}
+.comentarios .box-comentario .corpo-comentario {
+  width: auto;
+  background-color: #d6d6d6;
+  border-radius: 0 15px 15px 15px;
+  background-color: #b9e9fc;
+}
+.comentarios .box-comentario .corpo-comentario p {
+  margin: 1em;
+  color: #414141;
+}
+.comentarios .box-comentario .corpo-comentario p span {
+  display: block;
+  width: 100%;
+  color: #8f8f8f;
+  text-align: right;
+  font-size: 0.75em;
+}
+
+/*# sourceMappingURL=book.css.map */

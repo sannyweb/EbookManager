@@ -1,0 +1,208 @@
+//Variáveis
+
+$btn-color: #00aff2;
+$btn-font-color: #fdf4ed;
+$hover-color: #44caff;
+$default-gb-cards: #fafafa;
+$default-color: #5f5f5f;
+
+.resenhas {
+   display: flex;
+   flex-wrap: wrap;
+
+   h3 {
+      width: 100%;
+      text-align: center;
+      margin-bottom: 30px;
+   }
+
+   .livro {
+      width: 20%;
+      max-height: 300px;
+      max-height: fit-content;
+
+      img {
+         width: 90%;
+         display: block;
+         margin: auto;
+         box-shadow: 2px 2px 4px rgba(#000000, 0.4);
+      }
+
+      .titulo-livro {
+         text-align: center;
+         margin: 10px 0;
+         font-weight: 600;
+      }
+
+      button {
+         display: block;
+         margin: 20px auto;
+         padding: 7px 5px;
+         background-color: $btn-color;
+         color: $btn-font-color;
+         border: none;
+         outline: none;
+         cursor: pointer;
+
+         &:hover {
+            background-color: $hover-color;
+         }
+      }
+   }
+
+   .modal-adicionar-resenha {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.8);
+      top: 0;
+      left: 0;
+      z-index: 1000;
+      display: none;
+      animation: show-modal 500ms ease;
+
+      .btn-fechar {
+         position: absolute;
+         right: 20px;
+         top: 20px;
+         width: 50px;
+         height: 50px;
+         font-size: 2em;
+         text-align: center;
+         line-height: 50px;
+         color: #fdf4ed;
+         cursor: pointer;
+
+         &:hover {
+            background-color: #fdf4ed15;
+         }
+      }
+
+      .form-resenha {
+         width: 600px;
+         max-width: 100%;
+         margin: 100px auto 0;
+         padding: 20px;
+         background-color: $default-gb-cards;
+         border-radius: 3px;
+         // animation: show-modal 500ms ease;
+
+         .titulo-livro {
+            margin: 10px 0;
+            color: $default-color;
+            text-align: center;
+            font-weight: bold;
+         }
+
+         form {
+            width: 100%;
+            height: 100%;
+
+            .input-group {
+               display: flex;
+               flex-wrap: wrap;
+               margin-bottom: 10px;
+
+               label{
+                  width: 100%;
+                  font-size: 1.3em;
+                  margin-bottom: 7px;
+                  color: #292828;
+               }
+
+               input {
+                  width: 100%;
+                  padding: 5px;
+                  font-size: 1em;
+               }
+
+               textarea {
+                  width: 100%;
+                  resize: none;
+                  padding: 5px;
+                  font-family: sans-serif;
+               }
+
+               input[type=submit]{
+                  background-color: $btn-color;
+                  color: $btn-font-color;
+                  border: none;
+                  font-weight: 600;
+                  padding: 10px;
+                  margin-top: 10px;
+                  cursor: pointer;
+
+                  &:hover {
+                     background-color: $hover-color;
+                  }
+               }
+            }
+         }
+      }
+   }
+
+   .boxes {
+      width: 80%;
+
+      .box-resenha {
+         display: flex;
+
+         .left {
+            width: 25%;
+            height: 40px;
+            min-width: 90px;
+            min-width: min-content;
+            height: min-content;
+            flex-wrap: wrap;
+
+            .nick-name {
+               width: 100%;
+               margin: 0 0 10px 0;
+               text-align: center;
+               font-size: .95em;
+            }
+
+            .data-resenha {
+               width: 100%;
+               text-align: center;
+            }
+         }
+
+         .right {
+            width: 74%;
+
+            h4 {
+               margin: 0 0 10px 0;
+            }
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 960px) {
+   .main-content .resenhas {
+      flex-wrap: wrap;
+
+      .livro {
+         width: 100%;
+         height: auto;
+
+         img {
+            width: 150px;
+         }
+      }
+
+      .boxes {
+         width: 100%;
+      }
+   }
+}
+
+@keyframes show-modal {
+   from {
+      opacity: 0;
+   }
+   to {
+      opacity: 1;
+   }
+}

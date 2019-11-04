@@ -1,0 +1,29 @@
+form{
+    text-align: center;
+    padding: 20px;
+}
+form label,form input{
+    display: block;
+    margin: 20px auto;
+}
+label{
+    font-weight: bold;  
+    font-size: 2em;
+}
+input[type=text]{
+    outline-color: black;
+    height: 40px;
+    width: 220px;
+}
+input[type=submit]{
+    width: 110px;
+    height: 30px;
+    background-color: rgb(179, 179, 179);
+    border: none;
+    transition: all 0.5s;
+}
+input[type=submit]:hover{
+    cursor: pointer;
+    background-color: rgb(138, 137, 137);
+    border: 1px solid black;
+}

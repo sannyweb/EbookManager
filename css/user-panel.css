@@ -1,0 +1,168 @@
+@charset "UTF-8";
+.container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, minmax(100px, auto));
+  grid-gap: 20px 0;
+}
+.container .main {
+  min-height: 100vh;
+}
+.container .main .back-btn {
+  margin: 20px auto;
+}
+.container .main-content {
+  max-width: 960px;
+  padding: 10px;
+  background: #fafafa;
+  margin: auto;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+.container .main-content h3 {
+  text-align: center;
+  color: #4b4a4a;
+}
+.container .main-content .arquivos {
+  max-width: 715px;
+  max-width: 100%;
+  margin: auto;
+}
+.container .main-content .arquivos table {
+  width: 100%;
+  max-width: 100%;
+  border-collapse: collapse;
+}
+.container .main-content .arquivos table tr {
+  width: 100%;
+}
+.container .main-content .arquivos table th {
+  background-color: #00aff2;
+  color: white;
+  width: 25%;
+  padding: 10px 0;
+  font-size: 0.91em;
+}
+.container .main-content .arquivos table td {
+  width: 25%;
+  padding: 10px 0;
+  text-align: center;
+}
+.container .main-content .arquivos table tr:nth-child(odd) {
+  background-color: #e9e9e9;
+}
+.container .main-content .arquivos table tr:nth-child(even) {
+  background-color: #dbdbdb;
+}
+.container .enviar {
+  max-width: 960px;
+  padding: 10px 0;
+  background: #fafafa;
+  margin: auto;
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+.container .enviar h3 {
+  text-align: center;
+  color: #4b4a4a;
+}
+.container .enviar form {
+  width: 80%;
+  margin: auto;
+}
+.container .enviar form .input-group {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.container .enviar form .input-group input {
+  width: 48%;
+  padding: 5px;
+  font-size: 1.2em;
+  border-radius: 2px;
+  margin-bottom: 5px;
+  border: 1px solid #bdbdbd;
+}
+.container .enviar form .input-group input[type=file] {
+  display: none;
+}
+.container .enviar form .input-group .btn-arquivo {
+  padding: 10px;
+  width: 170px;
+  text-align: center;
+  background-color: #00aff2;
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+  margin-bottom: 10px;
+  white-space: nowrap;
+}
+.container .enviar form .input-group .btn-arquivo:hover {
+  background-color: #44caff;
+}
+.container .enviar form .input-group input[type=radio] {
+  display: none;
+}
+.container .enviar form .input-group input[type=radio]:checked + .label-for-radio {
+  background-color: #00aff2;
+  color: #ffffff;
+}
+.container .enviar form .input-group input[type=radio]:checked + .label-for-radio span::after {
+  content: "✔";
+  padding: 0 0 0 7px;
+  color: white;
+}
+.container .enviar form .input-group .label-for-radio {
+  width: 150px;
+  text-align: center;
+  padding: 10px;
+  background-color: #fafafa;
+  border: 1px solid #00aff2;
+  color: #4e4e4e;
+  cursor: pointer;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.container .enviar form .input-group .label-for-radio:hover {
+  box-shadow: 0 0 2px #00aff2;
+}
+.container .enviar form input[type=submit] {
+  display: block;
+  width: 160px;
+  font-size: 1.1em;
+  padding: 10px 6px;
+  background-color: #00aff2;
+  color: #f1f1f1;
+  border: none;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.container .enviar form input[type=submit]:hover {
+  background-color: #44caff;
+}
+.container .enviar form .nome-arquivo {
+  text-align: center;
+  font-size: 1.2em;
+  color: #00aff2;
+}
+.container .enviar form .submit-group {
+  align-items: baseline;
+}
+
+@media screen and (max-width: 630px) {
+  .container .enviar form .input-group .label-for-radio,
+.container .enviar form input[type=submit],
+.container .enviar form .input-group .btn-arquivo,
+.container .enviar form .input-group input[type=text] {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  table {
+    font-size: 0.65em;
+  }
+}
+
+/*# sourceMappingURL=user-panel.css.map */
